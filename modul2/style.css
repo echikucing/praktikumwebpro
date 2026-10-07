@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: red;
+}
+p {
+    color : white;
+}
+button {
+    background-color : purple;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: red;
+    }
+}
