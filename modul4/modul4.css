@@ -1,0 +1,249 @@
+/* ===== Reset Dasar ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ===== Pesan Selamat Datang ===== */
+.welcome-banner {
+  background: linear-gradient(90deg, #4a90e2, #6fb1fc);
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  font-weight: 600;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.welcome-banner.show {
+  max-height: 80px;
+  padding: 12px 10px;
+}
+
+/* ===== Header & Navigasi ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Animasi hover menu via CSS (dilengkapi JS nanti) */
+.nav-link:hover {
+  background-color: #4a90e2;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* ===== Konten Artikel ===== */
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.article-section h1 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.article-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.article-card h2 {
+  margin-bottom: 12px;
+  color: #4a90e2;
+}
+
+.article-card p {
+  margin-bottom: 12px;
+}
+
+/* ===== Form Kontak ===== */
+.contact-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  min-height: 18px;
+}
+
+.form-success {
+  color: #27ae60;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.btn-submit {
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #357ab8;
+  transform: scale(1.03);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+/*Media Query untuk layar ponsel*/
+@media screen and (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .article-card,
+  .contact-section {
+    padding: 18px;
+  }
+
+  .article-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
+
+/* ===== Galeri Foto ===== */
+.gallery-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 40px;
+}
+
+.gallery-section h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain; /* INI KUNCINYA: Agar gambar utuh tidak terpotong */
+  background-color: #f4f4f4; /* Opsional: memberi warna latar abu-abu jika gambar tidak memenuhi kotak */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Sederhana Responsif</title>
+    <link rel="stylesheet" href="modul4.css" />
+  </head>
+  <body>
+    <!-- Pesan Selamat Datang (diisi via JS) -->
+    <div id="welcome-banner" class="welcome-banner"></div>
+
+    <!-- Header + Navigasi -->
+    <header class="site-header">
+      <div class="logo">CHZ</div>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#galeri-iot" class="nav-link">Artikel</a></li>
+          <li><a href="#kontak" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Konten Utama -->
+    <main>
+      <!-- Artikel -->
+      <section id="artikel" class="article-section">
+        <h1>Belajar Pemrograman Web</h1>
+        <article class="article-card">
+          <h2>Disini saya akan mencoba praktikum modul 4</h2>
+          <p>
+            Konten artikel yang saya buat kali ini adalah tentang Internet of
+            Things (IoT).
+          </p>
+          <p>
+            Internet of Things (IoT) adalah konsep teknologi di mana berbagai
+            benda atau perangkat fisik terhubung ke jaringan internet, sehingga
+            dapat saling bertukar data dan dikendalikan secara otomatis tanpa
+            campur tangan manusia secara langsung.
+          </p>
+          <!-- Bagian Galeri Foto (Baru) -->
+          <section id="galeri-iot" class="gallery-section"></section>
+            <p>Saat ini Internet of Things atau IoT sudah menjadi bagian yang tidak dapat dipisahkan dalam kehidupan kita sehari-hari. 
+                IoT adalah sebuah teknologi yang memungkinan sebuah perangkat fisik untuk tehubung dan berkomunikasi dengan jaringan internet 
+                dan bertukar data secara otomatis tanpa campur tangan manusia. 
+                Dengan terus berkembangnya IoT banyak aspek kehidupan sehari hari yang mengalami otomisasi hari 
+                sehingga menjadi lebih efisien, nyaman, dan aman. 
+                Berikut adalah beberapa contoh penerapan IoT dalam kehidupan sehari-hari yang dapat membantu kehidupan sehari-hari.</p>
+            <h2>Galeri IoT</h2>
+            <div class="gallery-grid">
+              <!-- Ganti src dengan URL foto Anda sendiri -->
+              <img src="images.jpg" alt="Ilustrasi IoT 1" />
+              <img src="images (1).jpg" alt="Ilustrasi IoT 2" />
+              <img src="images (2).jpg" alt="Ilustrasi IoT 3" />
+              <img src="smart-home-1.png" alt="Ilustrasi IoT 5" />
+              <img
+                src="2f8279b4-ae57-4ecd-90f0-2aa258c05caf.png"
+                alt="Ilustrasi IoT 4"
+              />
+              <img src="circuit-2.jpg" alt="Ilustrasi IoT 5" />
+            </div>
+            <p>
+              <br />
+              Jika ada ide dan karya yang perlu dibagikan/dikembangkan, silakan
+              isi ide anda dan kirimkan melalui form kontak di bawah... Adios!
+            </p>
+          </section>
+        </article>
+      </section>
+
+      <!-- Form Kontak -->
+      <section id="kontak" class="contact-section">
+        <h2>Kirim Ide Anda di Sini!</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nama">Nama Lengkap Anda</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Masukkan nama anda"
+            />
+            <small class="error-msg" id="error-nama"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Anda</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="nama@email.com"
+            />
+            <small class="error-msg" id="error-email"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="pesan">Ide Seputar IoT</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="4"
+              placeholder="Tulis ide anda di sini"
+            ></textarea>
+            <small class="error-msg" id="error-pesan"></small>
+          </div>
+
+          <button type="submit" class="btn-submit">Kirim</button>
+          <p id="form-success" class="form-success"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>&copy; 2026 MyWebsite. Semua hak dilindungi.</p>
+      <p>Dibuat untuk latihan pemrograman web.</p>
+    </footer>
+
+    <script src="modul4.js"></script>
+  </body>
+</html>
